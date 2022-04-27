@@ -33,7 +33,7 @@ class SignIn extends StatelessWidget {
                   horizontal: 8.0,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
@@ -48,21 +48,37 @@ class SignIn extends StatelessWidget {
                   horizontal: 8.0,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
               ),
             ),
           ),
           const SizedBox(height: 16.0),
-          RaisedButton(
-            onPressed: () {},
-            child: const Text('Sign In'),
-          ),
-          const SizedBox(height: 16.0),
-          RaisedButton(
-            onPressed: () {},
-            child: const Text('Sign Up'),
-          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              TextButton(
+                style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blueGrey),
+                ),
+                onPressed: () {},
+                child: const Text('Sign In'),
+              ),
+              TextButton(
+                style: ButtonStyle(
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(Colors.white),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blueGrey),
+                ),
+                onPressed: () {},
+                child: const Text('Sign Up'),
+              ),
+            ],
+          )
         ],
       ),
     );
